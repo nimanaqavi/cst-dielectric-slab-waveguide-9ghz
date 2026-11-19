@@ -1,0 +1,60 @@
+% =========================================================================
+% titlepage_v2.tex — صفحه عنوان رسمی پروژه (قالب FW_ADS)
+% =========================================================================
+\defpersianfont\nast[Path={./font/}, Extension=.ttf, Scale=1.8]{IranNastaliq}
+
+\begin{titlepage}
+    \thispagestyle{empty} % حذف هدر و فوتر در صفحه عنوان
+    
+    % ---------------- کادر تزئینی دور صفحه با TikZ ----------------
+    \AddToShipoutPictureBG*{%
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width=2pt, color=codeblue]
+            ([shift={(1cm,-1cm)}]current page.north west)
+            rectangle
+            ([shift={(-1cm,1cm)}]current page.south east);
+        \end{tikzpicture}
+    }
+    
+    \begin{center}
+        \vspace*{0.8cm}
+        \includegraphics[width=4.5cm]{img/Logo.png}
+        \vspace{0.4cm}
+        
+        {\textcolor{codeblue}{\nast دانشگاه صنعتی خواجه نصیرالدین طوسی}}\\[0.4cm]
+        {\Large\textbf{دانشکده مهندسی برق}}\\[0.2cm]
+        {\large\textbf{گرایش مخابرات میدان و موج}}
+        
+        \vfill
+        
+        {\Huge\textbf{طراحی و شبیه‌سازی موج‌بر تیغه‌دار در \lr{CST}}}\\[0.6cm]
+        {\LARGE\textbf{بررسی تحلیلی و شبیه‌سازی تیغهٔ دی‌الکتریک در باند \lr{9 GHz}}}\\[0.4cm]
+        {\large\textbf{تحلیل مدهای انتشاری، پارامترهای پراکندگی، همگرایی مش و توزیع میدان‌ها}}\\[0.6cm]
+        {\huge\textbf{درس میدان‌ها و امواج}}
+        
+        \vfill
+        
+        {\large
+            \textbf{استاد درس:}\\[0.2cm]
+            دکتر زهرا قطان
+        }
+        
+        \vspace{0.8cm}
+        
+        % ---------------- جدول مشخصات دانشجو ----------------
+        {\Large
+            \renewcommand{\arraystretch}{1.5}
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{نام و نام خانوادگی} & \textbf{شماره دانشجویی} \\
+                \hline
+                نیما نقوی & \lr{40222323} \\
+                \hline
+            \end{tabular}
+        }
+        
+        \vfill
+        
+        {\large\textbf{پاییز ۱۴۰۳}}
+    \end{center}
+\end{titlepage}

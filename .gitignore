@@ -1,0 +1,20 @@
+# CST transient results, project cache and locks
+Slab_Waveguide_9GHz/
+*.lok
+*.temp
+*.bak
+*.tmp
+__pycache__/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Intermediate debug and preview files
+debug_*.txt
+test_*.bas
+test_*.png
+page*.png
