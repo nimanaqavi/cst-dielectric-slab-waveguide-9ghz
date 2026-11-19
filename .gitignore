@@ -1,4 +1,5 @@
 # CST transient results, project cache and locks
+cst_model/Slab_Waveguide_9GHz/
 Slab_Waveguide_9GHz/
 *.lok
 *.temp
@@ -7,14 +8,35 @@ Slab_Waveguide_9GHz/
 __pycache__/
 
 # LaTeX build artifacts
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.synctex.gz
 *.aux
 *.log
 *.out
 *.toc
 *.synctex.gz
 
-# Intermediate debug and preview files
+# Flat root legacy files (organized into modular subdirectories)
+*.bas
+*.tex
+*.s2p
+generate_v2_plots.py
+main.pdf
+main_v2.pdf
 debug_*.txt
 test_*.bas
 test_*.png
 page*.png
+s_parameters_*.png
+comparison_*.png
+delta_phi_*.png
+efield_*.png
+hfield_*.png
+ey_*.png
+longitudinal_*.png
+Slab_Waveguide_9GHz.cst
+font/
+img/

@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-dir_img = r'D:\CST Project\Slab_Waveguide_9GHz\img'
+data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+dir_img = os.path.join(os.path.dirname(__file__), '..', 'latex', 'img')
 os.makedirs(dir_img, exist_ok=True)
 
 def load_s2p(filepath):
@@ -21,8 +22,8 @@ def load_s2p(filepath):
                 s21_deg.append(float(p[4]))
     return np.array(freqs), np.array(s11_db), np.array(s11_deg), np.array(s21_db), np.array(s21_deg)
 
-f_slab, s11_slab, p11_slab, s21_slab, p21_slab = load_s2p(r'D:\CST Project\Slab_Waveguide_9GHz\Slab_Waveguide_9GHz.s2p')
-f_empty, s11_empty, p11_empty, s21_empty, p21_empty = load_s2p(r'D:\CST Project\Slab_Waveguide_9GHz\Slab_Waveguide_Empty.s2p')
+f_slab, s11_slab, p11_slab, s21_slab, p21_slab = load_s2p(os.path.join(data_dir, 'Slab_Waveguide_9GHz.s2p'))
+f_empty, s11_empty, p11_empty, s21_empty, p21_empty = load_s2p(os.path.join(data_dir, 'Slab_Waveguide_Empty.s2p'))
 
 # -------------------------------------------------------------
 # 1. Figure 2: S-parameters Magnitude (fixed title / text collision)
